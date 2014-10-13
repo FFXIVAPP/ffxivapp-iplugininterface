@@ -1,5 +1,5 @@
 ﻿// FFXIVAPP.IPluginInterface
-// IPluginHost.cs
+// ActorEntitiesEvent.cs
 // 
 // Copyright © 2007 - 2014 Ryan Wilson - All Rights Reserved
 // 
@@ -28,22 +28,20 @@
 // POSSIBILITY OF SUCH DAMAGE. 
 
 using System;
-using FFXIVAPP.Common.Models;
-using FFXIVAPP.IPluginInterface.Events;
+using System.Collections.Generic;
+using FFXIVAPP.Common.Core.Memory;
 
-namespace FFXIVAPP.IPluginInterface
+namespace FFXIVAPP.IPluginInterface.Events
 {
-    public interface IPluginHost
+    public class InventoryEntitiesEvent : EventArgs
     {
-        void PopupMessage(string pluginName, PopupContent content);
-        event EventHandler<ConstantsEntityEvent> NewConstantsEntity;
-        event EventHandler<ChatLogEntryEvent> NewChatLogEntry;
-        event EventHandler<ActorEntitiesEvent> NewMonsterEntries;
-        event EventHandler<ActorEntitiesEvent> NewNPCEntries;
-        event EventHandler<ActorEntitiesEvent> NewPCEntries;
-        event EventHandler<PlayerEntityEvent> NewPlayerEntity;
-        event EventHandler<TargetEntityEvent> NewTargetEntity;
-        event EventHandler<PartyEntitiesEvent> NewPartyEntries;
-        event EventHandler<InventoryEntitiesEvent> NewInventoryEntries;
+        public InventoryEntitiesEvent(object sender, List<InventoryEntity> inventoryEntities)
+        {
+            Sender = sender;
+            InventoryEntities = inventoryEntities;
+        }
+
+        public object Sender { get; set; }
+        public List<InventoryEntity> InventoryEntities { get; set; }
     }
 }
