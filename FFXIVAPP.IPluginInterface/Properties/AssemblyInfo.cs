@@ -39,7 +39,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SyndicatedLife")]
 [assembly: AssemblyProduct("FFXIVAPP.IPluginInterface")]
-[assembly: AssemblyCopyright("Copyright © 2007 - 2014 Ryan Wilson")]
+[assembly: AssemblyCopyright("Copyright © 2007 - 2015 Ryan Wilson")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
