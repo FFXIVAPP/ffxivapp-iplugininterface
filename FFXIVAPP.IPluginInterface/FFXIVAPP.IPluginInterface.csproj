@@ -47,6 +47,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\NetworkPacketEvent.cs" />
     <Compile Include="Events\InventoryEntitiesEvent.cs" />
     <Compile Include="Events\PartyEntityEvent.cs" />
     <Compile Include="Events\ConstantsEntityEvent.cs" />
