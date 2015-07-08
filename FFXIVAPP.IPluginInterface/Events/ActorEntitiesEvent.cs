@@ -35,13 +35,13 @@ namespace FFXIVAPP.IPluginInterface.Events
 {
     public class ActorEntitiesEvent : EventArgs
     {
-        public ActorEntitiesEvent(object sender, List<ActorEntity> actorEntities)
+        public ActorEntitiesEvent(object sender, IDictionary<UInt32, ActorEntity> actorEntities)
         {
             Sender = sender;
             ActorEntities = actorEntities;
         }
 
         public object Sender { get; set; }
-        public List<ActorEntity> ActorEntities { get; set; }
+        public IDictionary<UInt32, ActorEntity> ActorEntities { get; set; }
     }
 }

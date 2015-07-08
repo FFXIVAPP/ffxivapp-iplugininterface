@@ -35,13 +35,13 @@ namespace FFXIVAPP.IPluginInterface.Events
 {
     public class PartyEntitiesEvent : EventArgs
     {
-        public PartyEntitiesEvent(object sender, List<PartyEntity> partyEntities)
+        public PartyEntitiesEvent(object sender, IDictionary<UInt32, PartyEntity> partyEntities)
         {
             Sender = sender;
             PartyEntities = partyEntities;
         }
 
         public object Sender { get; set; }
-        public List<PartyEntity> PartyEntities { get; set; }
+        public IDictionary<UInt32, PartyEntity> PartyEntities { get; set; }
     }
 }
