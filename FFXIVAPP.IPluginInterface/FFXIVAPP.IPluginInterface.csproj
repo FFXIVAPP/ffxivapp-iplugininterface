@@ -51,6 +51,8 @@
     <Compile Include="Events\ActorEntitiesAddedEvent.cs" />
     <Compile Include="Events\NetworkPacketEvent.cs" />
     <Compile Include="Events\InventoryEntitiesEvent.cs" />
+    <Compile Include="Events\PartyEntityAddedRemovedEvent.cs" />
+    <Compile Include="Events\PartyEntityAddedEvent.cs" />
     <Compile Include="Events\PartyEntityEvent.cs" />
     <Compile Include="Events\ConstantsEntityEvent.cs" />
     <Compile Include="Events\ChatLogEntryEvent.cs" />

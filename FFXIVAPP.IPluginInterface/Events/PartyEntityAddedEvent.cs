@@ -1,5 +1,5 @@
 ﻿// FFXIVAPP.IPluginInterface
-// IPluginHost.cs
+// PartyEntityAddedEvent.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
 // 
@@ -28,31 +28,19 @@
 // POSSIBILITY OF SUCH DAMAGE. 
 
 using System;
-using FFXIVAPP.Common.Models;
-using FFXIVAPP.IPluginInterface.Events;
+using System.Collections.Generic;
 
-namespace FFXIVAPP.IPluginInterface
+namespace FFXIVAPP.IPluginInterface.Events
 {
-    public interface IPluginHost
+    public class PartyEntitiesAddedEvent : EventArgs
     {
-        void PopupMessage(string pluginName, PopupContent content);
-        event EventHandler<ConstantsEntityEvent> NewConstantsEntity;
-        event EventHandler<ChatLogEntryEvent> NewChatLogEntry;
-        event EventHandler<ActorEntitiesAddedEvent> NewMonsterEntriesAdded;
-        event EventHandler<ActorEntitiesAddedEvent> NewNPCEntriesAdded;
-        event EventHandler<ActorEntitiesAddedEvent> NewPCEntriesAdded;
-        event EventHandler<ActorEntitiesEvent> NewMonsterEntries;
-        event EventHandler<ActorEntitiesEvent> NewNPCEntries;
-        event EventHandler<ActorEntitiesEvent> NewPCEntries;
-        event EventHandler<ActorEntitiesRemovedEvent> NewMonsterEntriesRemoved;
-        event EventHandler<ActorEntitiesRemovedEvent> NewNPCEntriesRemoved;
-        event EventHandler<ActorEntitiesRemovedEvent> NewPCEntriesRemoved;
-        event EventHandler<PlayerEntityEvent> NewPlayerEntity;
-        event EventHandler<TargetEntityEvent> NewTargetEntity;
-        event EventHandler<PartyEntitiesAddedEvent> NewPartyEntriesAdded;
-        event EventHandler<PartyEntitiesEvent> NewPartyEntries;
-        event EventHandler<PartyEntitiesRemovedEvent> NewPartyEntriesRemoved;
-        event EventHandler<InventoryEntitiesEvent> NewInventoryEntries;
-        event EventHandler<NetworkPacketEvent> NewNetworkPacket;
+        public PartyEntitiesAddedEvent(object sender, List<UInt32> keys)
+        {
+            Sender = sender;
+            Keys = keys;
+        }
+
+        public object Sender { get; set; }
+        public List<UInt32> Keys { get; set; }
     }
 }
