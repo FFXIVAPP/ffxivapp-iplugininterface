@@ -28,20 +28,20 @@
 // POSSIBILITY OF SUCH DAMAGE. 
 
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using FFXIVAPP.Common.Core.Memory;
 
 namespace FFXIVAPP.IPluginInterface.Events
 {
     public class ActorEntitiesEvent : EventArgs
     {
-        public ActorEntitiesEvent(object sender, List<ActorEntity> actorEntities)
+        public ActorEntitiesEvent(object sender, ConcurrentDictionary<UInt32, ActorEntity> actorEntities)
         {
             Sender = sender;
             ActorEntities = actorEntities;
         }
 
         public object Sender { get; set; }
-        public List<ActorEntity> ActorEntities { get; set; }
+        public ConcurrentDictionary<UInt32, ActorEntity> ActorEntities { get; set; }
     }
 }

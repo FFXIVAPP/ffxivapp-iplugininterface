@@ -1,5 +1,5 @@
 ﻿// FFXIVAPP.IPluginInterface
-// PartyEntityEvent.cs
+// ActorEntitiesAddedEvent.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
 // 
@@ -28,20 +28,19 @@
 // POSSIBILITY OF SUCH DAMAGE. 
 
 using System;
-using System.Collections.Concurrent;
-using FFXIVAPP.Common.Core.Memory;
+using System.Collections.Generic;
 
 namespace FFXIVAPP.IPluginInterface.Events
 {
-    public class PartyEntitiesEvent : EventArgs
+    public class ActorEntitiesAddedEvent : EventArgs
     {
-        public PartyEntitiesEvent(object sender, ConcurrentDictionary<UInt32, PartyEntity> partyEntities)
+        public ActorEntitiesAddedEvent(object sender, List<UInt32> keys)
         {
             Sender = sender;
-            PartyEntities = partyEntities;
+            Keys = keys;
         }
 
         public object Sender { get; set; }
-        public ConcurrentDictionary<UInt32, PartyEntity> PartyEntities { get; set; }
+        public List<UInt32> Keys { get; set; }
     }
 }
