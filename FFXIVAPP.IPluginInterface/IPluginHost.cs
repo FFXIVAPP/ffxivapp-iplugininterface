@@ -36,6 +36,7 @@ namespace FFXIVAPP.IPluginInterface
     public interface IPluginHost
     {
         void PopupMessage(string pluginName, PopupContent content);
+        void DisplayInGameText(string pluginName, string message);
         event EventHandler<ConstantsEntityEvent> NewConstantsEntity;
         event EventHandler<ChatLogEntryEvent> NewChatLogEntry;
         event EventHandler<ActorEntitiesAddedEvent> NewMonsterEntriesAdded;
