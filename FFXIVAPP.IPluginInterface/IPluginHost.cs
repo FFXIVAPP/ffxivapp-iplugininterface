@@ -28,6 +28,8 @@
 // POSSIBILITY OF SUCH DAMAGE. 
 
 using System;
+using System.Drawing;
+using System.IO;
 using FFXIVAPP.Common.Models;
 using FFXIVAPP.IPluginInterface.Events;
 
@@ -37,6 +39,8 @@ namespace FFXIVAPP.IPluginInterface
     {
         void PopupMessage(string pluginName, PopupContent content);
         void DisplayInGameText(string pluginName, string message);
+        void AddOrUpdateInGameOverlay(string pluginName, Guid overlayID, Stream imageStream, float alpha, PointF location);
+        void RemoveInGameOverlay(string pluginName, Guid overlayID);
         event EventHandler<ConstantsEntityEvent> NewConstantsEntity;
         event EventHandler<ChatLogEntryEvent> NewChatLogEntry;
         event EventHandler<ActorEntitiesAddedEvent> NewMonsterEntriesAdded;
