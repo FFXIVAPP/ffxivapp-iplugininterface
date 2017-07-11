@@ -17,7 +17,7 @@
 
 using System;
 using System.Collections.Generic;
-using FFXIVAPP.Memory.Core;
+using Sharlayan.Core;
 
 namespace FFXIVAPP.IPluginInterface.Events
 {

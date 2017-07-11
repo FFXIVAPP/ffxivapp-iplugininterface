@@ -16,7 +16,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using FFXIVAPP.Memory.Core;
+using Sharlayan.Core;
 
 namespace FFXIVAPP.IPluginInterface.Events
 {

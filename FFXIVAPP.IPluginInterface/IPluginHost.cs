@@ -42,5 +42,6 @@ namespace FFXIVAPP.IPluginInterface
         event EventHandler<PartyEntitiesRemovedEvent> NewPartyEntriesRemoved;
         event EventHandler<InventoryEntitiesEvent> NewInventoryEntries;
         event EventHandler<NetworkPacketEvent> NewNetworkPacket;
+        event EventHandler<ActionEntityEvent> NewActionEntity;
     }
 }

@@ -1,4 +1,4 @@
-﻿// FFXIVAPP.IPluginInterface ~ PartyEntityEvent.cs
+﻿// FFXIVAPP.IPluginInterface ~ PluginInitializer.cs
 // 
 // Copyright © 2007 - 2017 Ryan Wilson - All Rights Reserved
 // 
@@ -15,21 +15,9 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Concurrent;
-using Sharlayan.Core;
-
-namespace FFXIVAPP.IPluginInterface.Events
+namespace FFXIVAPP.Client
 {
-    public class PartyEntitiesEvent : EventArgs
+    internal static class PluginInitializer
     {
-        public PartyEntitiesEvent(object sender, ConcurrentDictionary<UInt32, PartyEntity> partyEntities)
-        {
-            Sender = sender;
-            PartyEntities = partyEntities;
-        }
-
-        public object Sender { get; set; }
-        public ConcurrentDictionary<UInt32, PartyEntity> PartyEntities { get; set; }
     }
 }

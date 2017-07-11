@@ -1,4 +1,4 @@
-﻿// FFXIVAPP.IPluginInterface ~ PartyEntityEvent.cs
+﻿// FFXIVAPP.IPluginInterface ~ ActionEntityEvent.cs
 // 
 // Copyright © 2007 - 2017 Ryan Wilson - All Rights Reserved
 // 
@@ -16,20 +16,20 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Concurrent;
+using System.Collections.Generic;
 using Sharlayan.Core;
 
 namespace FFXIVAPP.IPluginInterface.Events
 {
-    public class PartyEntitiesEvent : EventArgs
+    public class ActionEntityEvent : EventArgs
     {
-        public PartyEntitiesEvent(object sender, ConcurrentDictionary<UInt32, PartyEntity> partyEntities)
+        public ActionEntityEvent(object sender, List<ActionEntity> actionEntities)
         {
             Sender = sender;
-            PartyEntities = partyEntities;
+            ActionEntities = actionEntities;
         }
 
         public object Sender { get; set; }
-        public ConcurrentDictionary<UInt32, PartyEntity> PartyEntities { get; set; }
+        public List<ActionEntity> ActionEntities { get; set; }
     }
 }

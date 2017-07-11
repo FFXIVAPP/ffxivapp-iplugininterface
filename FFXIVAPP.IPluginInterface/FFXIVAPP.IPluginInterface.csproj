@@ -34,10 +34,14 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\distribution\FFXIVAPP.IPluginInterface.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Sharlayan, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\ffxivapp-aio\packages\Sharlayan.3.0.0\lib\NET461\Sharlayan.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -54,11 +58,13 @@
     <Compile Include="Events\PartyEntityEvent.cs" />
     <Compile Include="Events\ConstantsEntityEvent.cs" />
     <Compile Include="Events\ChatLogEntryEvent.cs" />
+    <Compile Include="Events\ActionEntityEvent.cs" />
     <Compile Include="Events\TargetEntityEvent.cs" />
     <Compile Include="Events\PlayerEntityEvent.cs" />
     <Compile Include="Events\ActorEntitiesEvent.cs" />
     <Compile Include="IPluginHost.cs" />
     <Compile Include="IPlugin.cs" />
+    <Compile Include="PluginInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,10 +72,9 @@
       <Project>{8d6cda64-78be-4bf0-b613-0c9afa225df5}</Project>
       <Name>FFXIVAPP.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ffxivapp-memory\FFXIVAPP.Memory\FFXIVAPP.Memory.csproj">
-      <Project>{9510d5ef-208a-4897-a582-8eae5c6e9406}</Project>
-      <Name>FFXIVAPP.Memory</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
