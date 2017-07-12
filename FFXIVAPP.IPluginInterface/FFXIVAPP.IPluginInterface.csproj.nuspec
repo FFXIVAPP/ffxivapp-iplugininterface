@@ -11,7 +11,10 @@
     <iconUrl>https://raw.githubusercontent.com/Icehunter/ffxivapp-iplugininterface/master/FFXIVAPP.IPluginInterface/Logo.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+      3.0.2 remove logo from output
+      3.0.1 updated dependencies
+    </releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>ffxiv ffxivapp plugin interface</tags>
   </metadata>
