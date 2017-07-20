@@ -37,11 +37,11 @@
     <DocumentationFile>..\distribution\FFXIVAPP.IPluginInterface.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FFXIVAPP.Common, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FFXIVAPP.Common.4.0.1\lib\net461\FFXIVAPP.Common.dll</HintPath>
+    <Reference Include="FFXIVAPP.Common, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FFXIVAPP.Common.4.0.2\lib\net461\FFXIVAPP.Common.dll</HintPath>
     </Reference>
-    <Reference Include="FFXIVAPP.ResourceFiles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FFXIVAPP.ResourceFiles.1.0.0\lib\net461\FFXIVAPP.ResourceFiles.dll</HintPath>
+    <Reference Include="FFXIVAPP.ResourceFiles, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FFXIVAPP.ResourceFiles.1.0.1\lib\net461\FFXIVAPP.ResourceFiles.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
