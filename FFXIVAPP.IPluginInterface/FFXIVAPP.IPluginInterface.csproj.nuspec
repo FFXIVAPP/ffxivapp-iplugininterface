@@ -11,14 +11,6 @@
     <iconUrl>https://raw.githubusercontent.com/Icehunter/ffxivapp-iplugininterface/master/FFXIVAPP.IPluginInterface/Logo.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>
-      4.0.3 Adjust assembly vs file version for spec imports
-      4.0.2 Use new common build with resources library
-      4.0.1 Use new common build with resources library
-      4.0.0 updated to new common dll (breaking change)
-      3.0.2 remove logo from output
-      3.0.1 updated dependencies
-    </releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>ffxiv ffxivapp plugin interface</tags>
   </metadata>
