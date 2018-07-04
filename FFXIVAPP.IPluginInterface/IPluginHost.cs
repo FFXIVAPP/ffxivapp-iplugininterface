@@ -1,47 +1,58 @@
-﻿// FFXIVAPP.IPluginInterface ~ IPluginHost.cs
-// 
-// Copyright © 2007 - 2017 Ryan Wilson - All Rights Reserved
-// 
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IPluginHost.cs" company="SyndicatedLife">
+//   Copyright(c) 2018 Ryan Wilson &amp;lt;syndicated.life@gmail.com&amp;gt; (http://syndicated.life/)
+//   Licensed under the MIT license. See LICENSE.md in the solution root for full license information.
+// </copyright>
+// <summary>
+//   IPluginHost.cs Implementation
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using FFXIVAPP.Common.Models;
-using FFXIVAPP.IPluginInterface.Events;
+namespace FFXIVAPP.IPluginInterface {
+    using System;
 
-namespace FFXIVAPP.IPluginInterface
-{
-    public interface IPluginHost
-    {
+    using FFXIVAPP.Common.Models;
+    using FFXIVAPP.IPluginInterface.Events;
+
+    public interface IPluginHost {
+        event EventHandler<ActionContainersEvent> ActionContainersUpdated;
+
+        event EventHandler<ChatLogItemEvent> ChatLogItemReceived;
+
+        event EventHandler<ConstantsEntityEvent> ConstantsUpdated;
+
+        event EventHandler<CurrentPlayerEvent> CurrentPlayerUpdated;
+
+        event EventHandler<InventoryContainersEvent> InventoryContainersUpdated;
+
+        event EventHandler<ActorItemsAddedEvent> MonsterItemsAdded;
+
+        event EventHandler<ActorItemsRemovedEvent> MonsterItemsRemoved;
+
+        event EventHandler<ActorItemsEvent> MonsterItemsUpdated;
+
+        event EventHandler<NetworkPacketEvent> NetworkPacketReceived;
+
+        event EventHandler<ActorItemsAddedEvent> NPCItemsAdded;
+
+        event EventHandler<ActorItemsRemovedEvent> NPCItemsRemoved;
+
+        event EventHandler<ActorItemsEvent> NPCItemsUpdated;
+
+        event EventHandler<PartyMembersAddedEvent> PartyMembersAdded;
+
+        event EventHandler<PartyMembersRemovedEvent> PartyMembersRemoved;
+
+        event EventHandler<PartyMembersEvent> PartyMembersUpdated;
+
+        event EventHandler<ActorItemsAddedEvent> PCItemsAdded;
+
+        event EventHandler<ActorItemsRemovedEvent> PCItemsRemoved;
+
+        event EventHandler<ActorItemsEvent> PCItemsUpdated;
+
+        event EventHandler<TargetInfoEvent> TargetInfoUpdated;
+
         void PopupMessage(string pluginName, PopupContent content);
-        event EventHandler<ConstantsEntityEvent> NewConstantsEntity;
-        event EventHandler<ChatLogEntryEvent> NewChatLogEntry;
-        event EventHandler<ActorEntitiesAddedEvent> NewMonsterEntriesAdded;
-        event EventHandler<ActorEntitiesAddedEvent> NewNPCEntriesAdded;
-        event EventHandler<ActorEntitiesAddedEvent> NewPCEntriesAdded;
-        event EventHandler<ActorEntitiesEvent> NewMonsterEntries;
-        event EventHandler<ActorEntitiesEvent> NewNPCEntries;
-        event EventHandler<ActorEntitiesEvent> NewPCEntries;
-        event EventHandler<ActorEntitiesRemovedEvent> NewMonsterEntriesRemoved;
-        event EventHandler<ActorEntitiesRemovedEvent> NewNPCEntriesRemoved;
-        event EventHandler<ActorEntitiesRemovedEvent> NewPCEntriesRemoved;
-        event EventHandler<PlayerEntityEvent> NewPlayerEntity;
-        event EventHandler<TargetEntityEvent> NewTargetEntity;
-        event EventHandler<PartyEntitiesAddedEvent> NewPartyEntriesAdded;
-        event EventHandler<PartyEntitiesEvent> NewPartyEntries;
-        event EventHandler<PartyEntitiesRemovedEvent> NewPartyEntriesRemoved;
-        event EventHandler<InventoryEntitiesEvent> NewInventoryEntries;
-        event EventHandler<NetworkPacketEvent> NewNetworkPacket;
-        event EventHandler<ActionEntityEvent> NewActionEntity;
     }
 }

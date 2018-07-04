@@ -1,26 +1,26 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConstantsEntityEvent.cs" company="SyndicatedLife">
+// <copyright file="TargetInfoEvent.cs" company="SyndicatedLife">
 //   Copyright(c) 2018 Ryan Wilson &amp;lt;syndicated.life@gmail.com&amp;gt; (http://syndicated.life/)
 //   Licensed under the MIT license. See LICENSE.md in the solution root for full license information.
 // </copyright>
 // <summary>
-//   ConstantsEntityEvent.cs Implementation
+//   TargetInfoEvent.cs Implementation
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace FFXIVAPP.IPluginInterface.Events {
     using System;
 
-    using FFXIVAPP.Common.Core.Constant;
+    using Sharlayan.Core;
 
-    public class ConstantsEntityEvent : EventArgs {
-        public ConstantsEntityEvent(object sender, ConstantsEntity constantsEntity) {
+    public class TargetInfoEvent : EventArgs {
+        public TargetInfoEvent(object sender, TargetInfo targetInfo) {
             this.Sender = sender;
-            this.ConstantsEntity = constantsEntity;
+            this.TargetInfo = targetInfo;
         }
 
-        public ConstantsEntity ConstantsEntity { get; set; }
-
         public object Sender { get; set; }
+
+        public TargetInfo TargetInfo { get; set; }
     }
 }

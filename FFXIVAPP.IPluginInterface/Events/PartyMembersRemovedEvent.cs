@@ -1,25 +1,26 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConstantsEntityEvent.cs" company="SyndicatedLife">
+// <copyright file="PartyMembersRemovedEvent.cs" company="SyndicatedLife">
 //   Copyright(c) 2018 Ryan Wilson &amp;lt;syndicated.life@gmail.com&amp;gt; (http://syndicated.life/)
 //   Licensed under the MIT license. See LICENSE.md in the solution root for full license information.
 // </copyright>
 // <summary>
-//   ConstantsEntityEvent.cs Implementation
+//   PartyMembersRemovedEvent.cs Implementation
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace FFXIVAPP.IPluginInterface.Events {
     using System;
+    using System.Collections.Concurrent;
 
-    using FFXIVAPP.Common.Core.Constant;
+    using Sharlayan.Core;
 
-    public class ConstantsEntityEvent : EventArgs {
-        public ConstantsEntityEvent(object sender, ConstantsEntity constantsEntity) {
+    public class PartyMembersRemovedEvent : EventArgs {
+        public PartyMembersRemovedEvent(object sender, ConcurrentDictionary<uint, PartyMember> partyMembers) {
             this.Sender = sender;
-            this.ConstantsEntity = constantsEntity;
+            this.PartyMembers = partyMembers;
         }
 
-        public ConstantsEntity ConstantsEntity { get; set; }
+        public ConcurrentDictionary<uint, PartyMember> PartyMembers { get; set; }
 
         public object Sender { get; set; }
     }

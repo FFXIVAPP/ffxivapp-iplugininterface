@@ -1,25 +1,25 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConstantsEntityEvent.cs" company="SyndicatedLife">
+// <copyright file="ChatLogItemEvent.cs" company="SyndicatedLife">
 //   Copyright(c) 2018 Ryan Wilson &amp;lt;syndicated.life@gmail.com&amp;gt; (http://syndicated.life/)
 //   Licensed under the MIT license. See LICENSE.md in the solution root for full license information.
 // </copyright>
 // <summary>
-//   ConstantsEntityEvent.cs Implementation
+//   ChatLogItemEvent.cs Implementation
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace FFXIVAPP.IPluginInterface.Events {
     using System;
 
-    using FFXIVAPP.Common.Core.Constant;
+    using Sharlayan.Core;
 
-    public class ConstantsEntityEvent : EventArgs {
-        public ConstantsEntityEvent(object sender, ConstantsEntity constantsEntity) {
+    public class ChatLogItemEvent : EventArgs {
+        public ChatLogItemEvent(object sender, ChatLogItem chatLogItem) {
             this.Sender = sender;
-            this.ConstantsEntity = constantsEntity;
+            this.ChatLogItem = chatLogItem;
         }
 
-        public ConstantsEntity ConstantsEntity { get; set; }
+        public ChatLogItem ChatLogItem { get; set; }
 
         public object Sender { get; set; }
     }
