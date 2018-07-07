@@ -14,7 +14,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using FFXIVAPP.Common.Core.Constant;
 
     public class ConstantsEntityEvent : EventArgs {
-        public ConstantsEntityEvent(object sender, in ConstantsEntity constantsEntity) {
+        public ConstantsEntityEvent(object sender, ConstantsEntity constantsEntity) {
             this.Sender = sender;
             this.ConstantsEntity = constantsEntity;
         }

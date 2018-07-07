@@ -14,7 +14,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class ChatLogItemEvent : EventArgs {
-        public ChatLogItemEvent(object sender, in ChatLogItem chatLogItem) {
+        public ChatLogItemEvent(object sender, ChatLogItem chatLogItem) {
             this.Sender = sender;
             this.ChatLogItem = chatLogItem;
         }

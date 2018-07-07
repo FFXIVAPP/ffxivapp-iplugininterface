@@ -15,7 +15,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class PartyMembersAddedEvent : EventArgs {
-        public PartyMembersAddedEvent(object sender, in ConcurrentDictionary<uint, PartyMember> partyMembers) {
+        public PartyMembersAddedEvent(object sender, ConcurrentDictionary<uint, PartyMember> partyMembers) {
             this.Sender = sender;
             this.PartyMembers = partyMembers;
         }

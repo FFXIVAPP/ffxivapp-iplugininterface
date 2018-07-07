@@ -14,7 +14,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using FFXIVAPP.Common.Core.Network;
 
     public class NetworkPacketEvent : EventArgs {
-        public NetworkPacketEvent(object sender, in NetworkPacket networkPacket) {
+        public NetworkPacketEvent(object sender, NetworkPacket networkPacket) {
             this.Sender = sender;
             this.Packet = networkPacket;
         }

@@ -14,7 +14,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class CurrentPlayerEvent : EventArgs {
-        public CurrentPlayerEvent(object sender, in CurrentPlayer currentPlayer) {
+        public CurrentPlayerEvent(object sender, CurrentPlayer currentPlayer) {
             this.Sender = sender;
             this.CurrentPlayer = currentPlayer;
         }
