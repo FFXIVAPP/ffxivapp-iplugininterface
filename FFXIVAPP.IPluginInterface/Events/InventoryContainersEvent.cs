@@ -15,7 +15,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class InventoryContainersEvent : EventArgs {
-        public InventoryContainersEvent(object sender, List<InventoryContainer> inventoryContainers) {
+        public InventoryContainersEvent(object sender, in List<InventoryContainer> inventoryContainers) {
             this.Sender = sender;
             this.InventoryContainers = inventoryContainers;
         }

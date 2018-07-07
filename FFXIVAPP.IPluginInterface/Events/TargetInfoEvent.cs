@@ -14,7 +14,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class TargetInfoEvent : EventArgs {
-        public TargetInfoEvent(object sender, TargetInfo targetInfo) {
+        public TargetInfoEvent(object sender, in TargetInfo targetInfo) {
             this.Sender = sender;
             this.TargetInfo = targetInfo;
         }

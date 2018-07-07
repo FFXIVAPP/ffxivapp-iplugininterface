@@ -15,7 +15,7 @@ namespace FFXIVAPP.IPluginInterface.Events {
     using Sharlayan.Core;
 
     public class ActorItemsEvent : EventArgs {
-        public ActorItemsEvent(object sender, ConcurrentDictionary<uint, ActorItem> actorItems) {
+        public ActorItemsEvent(object sender, in ConcurrentDictionary<uint, ActorItem> actorItems) {
             this.Sender = sender;
             this.ActorItems = actorItems;
         }
