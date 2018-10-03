@@ -11,11 +11,8 @@
 namespace FFXIVAPP.IPluginInterface {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.Composition;
-    using System.Windows;
-    using System.Windows.Controls;
+    using Avalonia.Controls;
 
-    [InheritedExport(typeof(IPlugin))]
     public interface IPlugin {
         string Copyright { get; }
 
@@ -31,7 +28,7 @@ namespace FFXIVAPP.IPluginInterface {
 
         string Notice { get; }
 
-        MessageBoxResult PopupResult { get; set; }
+        // TODO: MessageBoxResult PopupResult { get; set; }
 
         Exception Trace { get; }
 
