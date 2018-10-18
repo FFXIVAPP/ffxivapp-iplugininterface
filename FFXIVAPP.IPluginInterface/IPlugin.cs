@@ -28,7 +28,7 @@ namespace FFXIVAPP.IPluginInterface {
 
         string Notice { get; }
 
-        // TODO: MessageBoxResult PopupResult { get; set; }
+        bool PopupResult { get; set; }
 
         Exception Trace { get; }
 
