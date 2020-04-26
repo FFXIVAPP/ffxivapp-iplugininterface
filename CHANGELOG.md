@@ -1,3 +1,4 @@
+5.0.4 dependency upgrade on common
 4.0.4 include symbols in package
 4.0.3 Adjust assembly vs file version for spec imports
 4.0.2 Use new common build with resources library
