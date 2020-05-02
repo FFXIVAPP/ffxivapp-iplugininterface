@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>https://github.com/Icehunter/ffxivapp-iplugininterface/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/Icehunter/ffxivapp-iplugininterface</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Icehunter/ffxivapp-iplugininterface/master/FFXIVAPP.IPluginInterface/Logo.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>$description$</description>
-    <copyright>$copyright$</copyright>
-    <tags>ffxiv ffxivapp plugin interface</tags>
-  </metadata>
+
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>$title$</title>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+		<licenseUrl>https://github.com/Icehunter/ffxivapp-iplugininterface/blob/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/Icehunter/ffxivapp-iplugininterface</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/Icehunter/ffxivapp-iplugininterface/master/FFXIVAPP.IPluginInterface/Logo.png</iconUrl>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<description>$description$</description>
+		<copyright>$copyright$</copyright>
+		<tags>ffxiv ffxivapp plugin interface</tags>
+	</metadata>
 </package>
