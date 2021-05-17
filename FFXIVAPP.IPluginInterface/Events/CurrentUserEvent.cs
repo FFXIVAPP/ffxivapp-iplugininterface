@@ -1,25 +1,25 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="NetworkPacketEvent.cs" company="SyndicatedLife">
+// <copyright file="CurrentUserEvent.cs" company="SyndicatedLife">
 //   Copyright© 2007 - 2021 Ryan Wilson &amp;lt;syndicated.life@gmail.com&amp;gt; (https://syndicated.life/)
 //   Licensed under the MIT license. See LICENSE.md in the solution root for full license information.
 // </copyright>
 // <summary>
-//   NetworkPacketEvent.cs Implementation
+//   CurrentUserEvent.cs Implementation
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace FFXIVAPP.IPluginInterface.Events {
     using System;
 
-    using FFXIVAPP.Common.Core.Network;
+    using Sharlayan.Core;
 
-    public class NetworkPacketEvent : EventArgs {
-        public NetworkPacketEvent(object sender, NetworkPacket networkPacket) {
+    public class CurrentUserEvent : EventArgs {
+        public CurrentUserEvent(object sender, ActorItem currentUser) {
             this.Sender = sender;
-            this.Packet = networkPacket;
+            this.CurrentUser = currentUser;
         }
 
-        public NetworkPacket Packet { get; set; }
+        public ActorItem CurrentUser { get; set; }
 
         public object Sender { get; set; }
     }

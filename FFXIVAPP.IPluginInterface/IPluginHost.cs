@@ -21,7 +21,7 @@ namespace FFXIVAPP.IPluginInterface {
 
         event EventHandler<ConstantsEntityEvent> ConstantsUpdated;
 
-        event EventHandler<CurrentPlayerEvent> CurrentPlayerUpdated;
+        event EventHandler<CurrentUserEvent> CurrentUserUpdated;
 
         event EventHandler<InventoryContainersEvent> InventoryContainersUpdated;
 
@@ -30,8 +30,6 @@ namespace FFXIVAPP.IPluginInterface {
         event EventHandler<ActorItemsRemovedEvent> MonsterItemsRemoved;
 
         event EventHandler<ActorItemsEvent> MonsterItemsUpdated;
-
-        event EventHandler<NetworkPacketEvent> NetworkPacketReceived;
 
         event EventHandler<ActorItemsAddedEvent> NPCItemsAdded;
 
@@ -50,6 +48,8 @@ namespace FFXIVAPP.IPluginInterface {
         event EventHandler<ActorItemsRemovedEvent> PCItemsRemoved;
 
         event EventHandler<ActorItemsEvent> PCItemsUpdated;
+
+        event EventHandler<PlayerInfoEvent> PlayerInfoUpdated;
 
         event EventHandler<TargetInfoEvent> TargetInfoUpdated;
 
