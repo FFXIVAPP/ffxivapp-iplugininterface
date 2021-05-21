@@ -10,17 +10,18 @@
 
 namespace FFXIVAPP.IPluginInterface.Events {
     using System;
+    using System.Collections.Concurrent;
     using System.Collections.Generic;
 
     using Sharlayan.Core;
 
     public class ActionContainersEvent : EventArgs {
-        public ActionContainersEvent(object sender, List<ActionContainer> actionContainers) {
+        public ActionContainersEvent(object sender, ConcurrentBag<ActionContainer> actionContainers) {
             this.Sender = sender;
             this.ActionContainers = actionContainers;
         }
 
-        public List<ActionContainer> ActionContainers { get; set; }
+        public ConcurrentBag<ActionContainer> ActionContainers { get; set; }
 
         public object Sender { get; set; }
     }
